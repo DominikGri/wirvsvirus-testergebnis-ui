@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {faCheckCircle} from '@fortawesome/free-solid-svg-icons';
+import {faCheckCircle, faInfoCircle} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-result-component',
@@ -8,4 +8,5 @@ import {faCheckCircle} from '@fortawesome/free-solid-svg-icons';
 })
 export class ResultsComponent {
   faCheckCircle = faCheckCircle;
+  faInfoCircle = faInfoCircle
 }
