@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {ResultsComponent} from './results/results.component';
 import {LoginComponent} from './login/login.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -18,9 +19,11 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent, ResultsComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

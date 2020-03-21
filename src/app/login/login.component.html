@@ -2,17 +2,23 @@
   <div class="row justify-content-md-center">
     <div class="col-lg-4 col-md-6">
       <h1>Testergebnis für Covid-19</h1>
-      <form>
+      <form [formGroup]="form" (ngSubmit)="login()">
         <div class="form-group">
-          <label for="exampleInputEmail1">Testnummer</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-          <small id="emailHelp" class="form-text text-muted">Bitte geben Sie Ihre persönliche Testnummer ein.</small>
+          <label for="inputId">Testnummer</label>
+          <input formControlName="inputId"  type="text" class="form-control" aria-describedby="idHelp" required>
+          <small id="idHelp" class="form-text text-muted">Bitte geben Sie Ihre persönliche Testnummer ein.</small>
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Geburtsdatum</label>
-          <input type="password" class="form-control" id="exampleInputPassword1">
+          <label for="inputLastname">Nachname</label>
+          <input formControlName="inputLastname" type="text" class="form-control" id="inputLastname" required>
+          <small id="lastnameHelp" class="form-text text-muted">Bitte geben Sie Ihren Nachnamen ein.</small>
         </div>
-        <button type="submit" class="btn btn-primary" (click)="login()">Ergebnisse einsehen</button>
+        <div class="form-group">
+          <label for="inputBirthdate">Geburtsdatum</label>
+          <input formControlName="inputBirthdate" type="date" class="form-control" id="inputBirthdate" required>
+          <small id="birthdateHelp" class="form-text text-muted">Bitte geben Sie Ihr Geburtsdatim (dd.mm.yyyy) ein.</small>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Ergebnisse einsehen</button>
       </form>
     </div>
   </div>
