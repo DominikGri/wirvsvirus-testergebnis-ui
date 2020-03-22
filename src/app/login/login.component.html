@@ -4,8 +4,8 @@
       <h1>Testergebnis für Covid-19</h1>
       <form [formGroup]="form" (ngSubmit)="login()">
         <div class="form-group">
-          <label for="inputId">Testnummer</label>
-          <input formControlName="inputId"  type="text" class="form-control" aria-describedby="idHelp" required>
+          <label for="inputId">Identifikationsnummer</label>
+          <input formControlName="inputId" id="inputId" type="text" class="form-control" aria-describedby="idHelp" required>
           <small id="idHelp" class="form-text text-muted">Bitte geben Sie Ihre persönliche Testnummer ein.</small>
         </div>
         <div class="form-group">
@@ -14,11 +14,11 @@
           <small id="lastnameHelp" class="form-text text-muted">Bitte geben Sie Ihren Nachnamen ein.</small>
         </div>
         <div class="form-group">
-          <label for="inputBirthdate">Geburtsdatum</label>
-          <input formControlName="inputBirthdate" type="date" class="form-control" id="inputBirthdate" required>
-          <small id="birthdateHelp" class="form-text text-muted">Bitte geben Sie Ihr Geburtsdatim (dd.mm.yyyy) ein.</small>
+          <label for="inputBirthday">Geburtsdatum</label>
+          <input formControlName="inputBirthday" type="date" class="form-control" id="inputBirthday" required>
+          <small id="birthdayHelp" class="form-text text-muted">Bitte geben Sie Ihr Geburtsdatim (dd.mm.yyyy) ein.</small>
         </div>
-        <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Ergebnisse einsehen</button>
+        <button type="submit" class="btn btn-primary" [disabled]="!form.valid"><img *ngIf="loading" class="mr-1" src="assets/images/loader.svg" width="20px">Ergebnisse einsehen</button>
       </form>
     </div>
   </div>

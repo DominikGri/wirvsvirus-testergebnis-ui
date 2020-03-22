@@ -1,10 +1,9 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {faHeart} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
   faHeart = faHeart

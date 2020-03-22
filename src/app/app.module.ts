@@ -1,19 +1,23 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ResultsComponent} from './results/results.component';
 import {LoginComponent} from './login/login.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from '@angular/common/http';
+import {DatePipe} from "@angular/common";
+import {SampleInfoComponent} from "./results/sample-info.component.ts/sample-info.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     ResultsComponent,
-    LoginComponent
+    LoginComponent,
+    SampleInfoComponent
   ],
   imports: [
     BrowserModule,
@@ -21,9 +25,11 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     BrowserAnimationsModule,
     FontAwesomeModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

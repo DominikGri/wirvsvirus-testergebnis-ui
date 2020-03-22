@@ -1,17 +1,10 @@
 <div class="container results">
   <div class="row justify-content-md-center">
     <div class="col-lg-8 col-md-10">
-      <h1>Ihr Ergebnis</h1>
+      <h1>Ihr Teststatus</h1>
     </div>
   </div>
-  <div class="row justify-content-md-center mb-5">
-    <div class="col-lg-1 col-md-2">
-      <fa-icon class="circle circle-green" [icon]="faCheckCircle"></fa-icon>
-    </div>
-    <div class="col-lg-7 col-md-6 ">
-      <h2 class="result-text">Ihr Test ist negativ.</h2>
-    </div>
-  </div>
+  <app-sample-info-component [sample]="sample$ | async"></app-sample-info-component>
 
   <div class="row mt-5 mb-5 justify-content-md-center">
     <div class="bg-light col-lg-10 border">
