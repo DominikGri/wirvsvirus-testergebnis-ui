@@ -13,7 +13,7 @@ export class DataService {
   }
 
   getHash(sampleId: string, name: string, birthday: string): Observable<string> {
-    birthday = this.datepipe.transform(birthday, 'yy-MM-dd');
+    birthday = this.datepipe.transform(birthday, 'yyyy-MM-dd');
 
     return this.http.get<string>(
       `https://wirvsvirus-backend.azurewebsites.net/hashes?sampleId=${sampleId}&name=${name}&birthday=${birthday}`

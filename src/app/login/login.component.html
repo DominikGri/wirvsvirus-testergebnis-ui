@@ -16,7 +16,7 @@
         <div class="form-group">
           <label for="inputBirthday">Geburtsdatum</label>
           <input formControlName="inputBirthday" type="date" class="form-control" id="inputBirthday" required>
-          <small id="birthdayHelp" class="form-text text-muted">Bitte geben Sie Ihr Geburtsdatim (dd.mm.yyyy) ein.</small>
+          <small id="birthdayHelp" class="form-text text-muted">Bitte geben Sie Ihr Geburtsdatum (dd.mm.yyyy) ein.</small>
         </div>
         <button type="submit" class="btn btn-primary" [disabled]="!form.valid"><img *ngIf="loading" class="mr-1" src="assets/images/loader.svg" width="20px">Ergebnisse einsehen</button>
       </form>
